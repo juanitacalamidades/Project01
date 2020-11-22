@@ -4,18 +4,21 @@ const app = express();
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
 const MongoClient = mongodb.MongoClient;
 let db;
-MongoClient.connect("mongodb+srv://juanita:rodionova23@cluster0.3ahgo.mongodb.net/satanistak?retryWrites=true&w=majority", function (err, client) {
+MongoClient.connect('mongodb+srv://juanita:rodionova23@cluster0.3ahgo.mongodb.net/satanistak?retryWrites=true&w=majority', function (err, client) {
   if (err !== null) {
     console.log(err);
   } else {
+    console.log('YUHUUUU')
     db = client.db("satanistak");
   }
 });
 
 app.post("/reservas", function(req, res){
     const reserva = req.body;
+    console.log(reserva);
 /*-find cliente*/
     db.collection("clientes").insertOne(reserva, function (err, datos){
         if(err!==null){
@@ -25,7 +28,6 @@ app.post("/reservas", function(req, res){
         }
     });
 });
-
 
 app.put("/cambiardireccion", function(req, res){
   const nombre = req.body.nombre;

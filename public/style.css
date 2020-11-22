@@ -5,7 +5,7 @@
     font-family: 'Poiret One', cursive;
 }
 
-.body{
+body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -14,8 +14,12 @@
     color: whitesmoke;
     font-family: 'Stalinist One', cursive;
 }
- 
-#alinear{
+
+label {
+    margin: 1rem 0 1rem 0;
+}
+
+.alinear{
     display: flex;
     justify-content: center;  
     align-items: center;

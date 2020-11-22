@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
-
+    <link rel="icon" href="./assets/etiqueta02.jpg" type="image/jpg">
 </head>
 
-<body class="body">
+<body>
    
 
     <nav>
@@ -21,10 +21,10 @@
             <div class="div">
                 <h1><a href="index.html" style="text-decoration: none;">EUSKAL HERRIKO SATANISTAK</a></h1>
                 <div class="font02" style="text-decoration:line-through;">
-                    <p id="alinear" style="color: rgb(255, 255, 255); font-size: 18px;">Camisetas desde el infierno</p>
+                    <p class="alinear" style="color: rgb(255, 255, 255); font-size: 18px;">Camisetas desde el infierno</p>
                 </div>
 
-                <p id="alinear" class="transicion">
+                <p class="transicion alinear">
                     <img src="fire.gif" width="70" height="50" />
                     Edición Limitada
                     <img src="fire.gif" width="70" height="50" />
@@ -39,48 +39,48 @@
 
 
     <div class="div">
-        <form action=“/” class="divReserva">
-            <p class="font02">Nombre</p> <input type=“text” placeholder="nombre" id="nombre" />
-            <p class="font02">Apellidos</p> <input type=“text” placeholder="apellidos" id="apellidos" />
-            <p class="font02">Dirección de envío</p><input type="text" placeholder="dircción de envío" id="direccion" />
-            <p class="font02">Municipio</p><input type="text" placeholder="municipio" id="municipio" />
-            <p class="font02">Código postal</p><input type="text" placeholder="Código postal" id="codigoPostal" />
-            <p class="font02">E-mail</p><input type="text" placeholder="e-mail" id="email" />
+        <form class="divReserva">
+            <label class="font02" for="nombre">Nombre</label> <input type=“text” placeholder="nombre" id="nombre" />
+            <label class="font02">Apellidos</label> <input type=“text” placeholder="apellidos" id="apellidos" />
+            <label class="font02">Dirección de envío</label><input type="text" placeholder="dircción de envío" id="direccion" />
+            <label class="font02">Municipio</label><input type="text" placeholder="municipio" id="municipio" />
+            <label class="font02">Código postal</label><input type="text" placeholder="Código postal" id="codigoPostal" />
+            <label class="font02">E-mail</label><input type="text" placeholder="e-mail" id="email" />
 
-            <select name="select" id="select" class="estiloSelect">
+            <select name="talla" id="talla" class="estiloSelect">
                 <option value="" class="font02" style="font-size: 20px;">Tallas</option>
                 <option value="xs" class="font02" style="font-size: 20px;">Talla XS</option>
                 <option value="s" class="font02" style="font-size: 20px;">Talla S</option>
                 <option value="m" class="font02" style="font-size: 20px;">Talla M</option>
                 <option value="l" class="font02" style="font-size: 20px;">Talla L</option>
                 <option value="xl" class="font02" style="font-size: 20px;">Talla XL</option>
-
             </select>
-            <button class="botonReserva" onclick="registrarReserva()">Elige tu talla</button>
+            <button class="botonReserva" onclick="registrarReserva()">Regístrate y reserva</button>
+            <button class="botonReserva" style="font-size: 15px; margin-top: 10px; margin-bottom: 10px;">Cambia tu reserva</button>
+           
         </form>
 
 
 
         <div class="divImg">
-            <img src="etiqueta02.jpg" width="300" height="300" alt="" />
+            <img src="./assets/etiqueta02.jpg" width="300" height="300" alt="" />
             <img src="modelo.jpg" width="200" height="200" alt="" />
             <img src="propina.jpg" width="290" height="240" alt="" />
-
         </div>
+
+        <footer class="footer">
+
+
+            <div class="footerDiv"><a href="aboutUs.html" style="text-decoration: none;" id="color">Quiénes somos</a></div>
+            <div class="footerDiv"><a href="metodoPago.html" style="text-decoration: none;" id="color">Método de pago</a></div>
+            <div class="footerDiv"><a href="https://www.instagram.com/aginowsky/?hl=es" style="text-decoration: none;"
+                    id="color">Instagram</a></div>
+        
+        
+        </footer>
 
 
         <script src="./index.js"></script>
 </body>
-
-<footer class="footer">
-
-
-    <div class="footerDiv"><a href="aboutUs.html" style="text-decoration: none;" id="color">Quiénes somos</a></div>
-    <div class="footerDiv"><a href="metodoPago.html" style="text-decoration: none;" id="color">Método de pago</a></div>
-    <div class="footerDiv"><a href="https://www.instagram.com/aginowsky/?hl=es" style="text-decoration: none;"
-            id="color">Instagram</a></div>
-
-
-</footer>
 
 </html>

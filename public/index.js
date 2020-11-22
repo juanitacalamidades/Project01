@@ -1,30 +1,32 @@
 let talla = "";
+let nombre= "";
+let apellidos="";
+let direccion="";
+let email="";
 
 let tallas = {
-    xs: xs,
-    s: s,
-    m: m,
-    l: l,
-    xl: xl,
+    "xs": "xs",
+    "s": "s",
+    "m": "m",
+    "l": "l",
+    "xl": "xl",
 }
 
 function registrarReserva(){
-    talla = document.getElementById("select").value
-    const nombre = document.getElementById("nombre").value;
-    const apellidos = document.getElementById("apellidos").value;
-    const direccion = document.getElementById("direccion").value;
-    const email = document.getElementById("email").value;
-
-
+    console.log("ESTO ES UNA PUÑETERA RESERVA");
+    talla = document.getElementById("talla").value;
+    nombre = document.getElementById("nombre").value;
+    apellidos = document.getElementById("apellidos").value;
+    direccion = document.getElementById("direccion").value;
+    email = document.getElementById("email").value;
 
     const reserva = {
-        nombre,
-        apellidos,
-        direccion,
-        email,
-        tallas,
+        "nombre": nombre,
+        "apellidos": apellidos,
+        "direccion": direccion,
+        "email": email,
+        "talla": talla
     };
-
 
     fetch('/reservas', {
         method:  "POST",
@@ -39,5 +41,3 @@ function registrarReserva(){
     });
 
 };
-
-
